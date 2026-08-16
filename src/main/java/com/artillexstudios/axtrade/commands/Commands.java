@@ -23,18 +23,18 @@ public class Commands implements OrphanCommand {
         Request.INSTANCE.execute(sender, other);
     }
 
-    @Subcommand("accept")
+    @Subcommand({"accept", "akceptuj"})
     public void accept(Player sender, Player other) {
         Accept.INSTANCE.execute(sender, other);
     }
 
-    @Subcommand("deny")
+    @Subcommand({"deny", "odrzuć", "odrzuc"})
     public void deny(Player sender, Player other) {
         Deny.INSTANCE.execute(sender, other);
     }
 
+    @Subcommand({"toggle", "przelacz", "przełącz"})
     @CommandPermission("axtrade.toggle")
-    @Subcommand("toggle")
     public void toggle(CommandSender sender, @Optional @CommandPermission("axtrade.toggle.other") Player other) {
         Toggle.INSTANCE.execute(sender, other);
     }
