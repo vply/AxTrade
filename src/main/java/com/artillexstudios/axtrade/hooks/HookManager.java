@@ -11,7 +11,6 @@ import com.artillexstudios.axtrade.hooks.currency.ExcellentEconomyHook;
 import com.artillexstudios.axtrade.hooks.currency.ExperienceHook;
 import com.artillexstudios.axtrade.hooks.currency.PlaceholderCurrencyHook;
 import com.artillexstudios.axtrade.hooks.currency.PlayerPointsHook;
-import com.artillexstudios.axtrade.hooks.currency.RedisEconomyHook;
 import com.artillexstudios.axtrade.hooks.currency.TokenManagerHook;
 import com.artillexstudios.axtrade.hooks.currency.VaultHook;
 import com.artillexstudios.axtrade.hooks.other.AxShulkersHook;
@@ -72,13 +71,6 @@ public class HookManager {
                 }
                 Bukkit.getConsoleSender().sendMessage(StringUtils.formatToString("&#33FF33[AxTrade] Hooked into CoinsEngine!"));
             }
-        }
-
-        if (HOOKS.getBoolean("currencies.RedisEconomy.register", true) && Bukkit.getPluginManager().getPlugin("RedisEconomy") != null) {
-            for (Map<Object, Object> curr : HOOKS.getMapList("currencies.RedisEconomy.enabled")) {
-                currency.add(new RedisEconomyHook(curr));
-            }
-            Bukkit.getConsoleSender().sendMessage(StringUtils.formatToString("&#33FF33[AxTrade] Hooked into RedisEconomy!"));
         }
 
         for (String str : HOOKS.getSection("placeholder-currencies").getRoutesAsStrings(false)) {

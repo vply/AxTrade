@@ -27,7 +27,6 @@ softdepend:
   - TheOnly-MobCoins
   - TokenManager
   - UltraEconomy
-  - RedisEconomy
   - BeastTokens
   - EcoBits
   - RivalCredits

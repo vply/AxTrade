@@ -83,11 +83,6 @@ currencies:
     register: true
     name: "essence"
   # note: you will have to use the currency name "RedisEconomy-coins" for example when using a multi currency plugin!
-  RedisEconomy:
-    register: true
-    enabled:
-      - currency-name: "coins"
-        name: "coins"
   BeastTokens:
     register: true
     name: "tokens"
